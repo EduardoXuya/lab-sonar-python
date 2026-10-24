@@ -12,11 +12,11 @@ jobs:
       - name: Descargar codigo fuente del repositorio
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0 # Necesario para que SonarQube analice la historia de commits
+          fetch-depth: 0
       - name: Configurar entorno Python
         uses: actions/setup-python@v5
         with:
-          python-version: '3.9'
+          python-version: '3.11'
       - name: Instalar dependencias
         run: |
           python -m pip install --upgrade pip
